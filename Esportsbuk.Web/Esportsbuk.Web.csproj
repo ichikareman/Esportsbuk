@@ -1,0 +1,1202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3993EC87-EEFD-4089-A704-B44A02A12A0D}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Esportsbuk.Web</RootNamespace>
+    <AssemblyName>Esportsbuk.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.2.0.20710.0\lib\net40\WebMatrix.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebPages.OAuth, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.OAuth.2.0.20710.0\lib\net40\Microsoft.Web.WebPages.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.WebData, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.2.0.20710.0\lib\net40\WebMatrix.WebData.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.0.3.12153\lib\net40-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\AuthConfig.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="jMvc\documentjs\build.js" />
+    <Content Include="jMvc\documentjs\demo\something.js" />
+    <Content Include="jMvc\documentjs\demo\test.html" />
+    <Content Include="jMvc\documentjs\distance.js" />
+    <Content Include="jMvc\documentjs\documentjs.js" />
+    <Content Include="jMvc\documentjs\jmvcdoc\content\content.html" />
+    <Content Include="jMvc\documentjs\jmvcdoc\content\content.js" />
+    <Content Include="jMvc\documentjs\jmvcdoc\content\content_test.js" />
+    <Content Include="jMvc\documentjs\jmvcdoc\content\doc_updated.js" />
+    <Content Include="jMvc\documentjs\jmvcdoc\content\funcunit.html" />
+    <Content Include="jMvc\documentjs\jmvcdoc\demo\demo.js" />
+    <Content Include="jMvc\documentjs\jmvcdoc\highlight\highlight.js" />
+    <Content Include="jMvc\documentjs\jmvcdoc\highlight\languages\javascript.js" />
+    <Content Include="jMvc\documentjs\jmvcdoc\highlight\languages\www.js" />
+    <Content Include="jMvc\documentjs\jmvcdoc\iframe\iframe.js" />
+    <Content Include="jMvc\documentjs\jmvcdoc\images\close.png" />
+    <Content Include="jMvc\documentjs\jmvcdoc\images\fav-off.png" />
+    <Content Include="jMvc\documentjs\jmvcdoc\images\fav-on.png" />
+    <Content Include="jMvc\documentjs\jmvcdoc\images\favicon.ico" />
+    <Content Include="jMvc\documentjs\jmvcdoc\images\logo.png" />
+    <Content Include="jMvc\documentjs\jmvcdoc\images\logo80x30.png" />
+    <Content Include="jMvc\documentjs\jmvcdoc\images\main_sprite.jpg" />
+    <Content Include="jMvc\documentjs\jmvcdoc\images\main_sprite.png" />
+    <Content Include="jMvc\documentjs\jmvcdoc\images\menu_button.png" />
+    <Content Include="jMvc\documentjs\jmvcdoc\images\pre.png" />
+    <Content Include="jMvc\documentjs\jmvcdoc\images\sidebar_top_close.png" />
+    <Content Include="jMvc\documentjs\jmvcdoc\images\type.png" />
+    <Content Include="jMvc\documentjs\jmvcdoc\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="jMvc\documentjs\jmvcdoc\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="jMvc\documentjs\jmvcdoc\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="jMvc\documentjs\jmvcdoc\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="jMvc\documentjs\jmvcdoc\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="jMvc\documentjs\jmvcdoc\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="jMvc\documentjs\jmvcdoc\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="jMvc\documentjs\jmvcdoc\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="jMvc\documentjs\jmvcdoc\images\ui-icons_222222_256x240.png" />
+    <Content Include="jMvc\documentjs\jmvcdoc\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="jMvc\documentjs\jmvcdoc\images\ui-icons_454545_256x240.png" />
+    <Content Include="jMvc\documentjs\jmvcdoc\images\ui-icons_888888_256x240.png" />
+    <Content Include="jMvc\documentjs\jmvcdoc\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="jMvc\documentjs\jmvcdoc\images\_sidebar_top_close.png" />
+    <Content Include="jMvc\documentjs\jmvcdoc\jmvcdoc.html" />
+    <Content Include="jMvc\documentjs\jmvcdoc\jmvcdoc.js" />
+    <Content Include="jMvc\documentjs\jmvcdoc\models\favorites.js" />
+    <Content Include="jMvc\documentjs\jmvcdoc\models\search.js" />
+    <Content Include="jMvc\documentjs\jmvcdoc\nav\funcunit.html" />
+    <Content Include="jMvc\documentjs\jmvcdoc\nav\nav.html" />
+    <Content Include="jMvc\documentjs\jmvcdoc\nav\nav.js" />
+    <Content Include="jMvc\documentjs\jmvcdoc\nav\nav_test.js" />
+    <Content Include="jMvc\documentjs\jmvcdoc\production.css" />
+    <Content Include="jMvc\documentjs\jmvcdoc\production.js" />
+    <Content Include="jMvc\documentjs\jmvcdoc\qunit.html" />
+    <Content Include="jMvc\documentjs\jmvcdoc\resources\helpers.js" />
+    <Content Include="jMvc\documentjs\jmvcdoc\scripts\build.js" />
+    <Content Include="jMvc\documentjs\jmvcdoc\scripts\doc.js" />
+    <Content Include="jMvc\documentjs\jmvcdoc\search\funcunit.html" />
+    <Content Include="jMvc\documentjs\jmvcdoc\search\search.html" />
+    <Content Include="jMvc\documentjs\jmvcdoc\search\search.js" />
+    <Content Include="jMvc\documentjs\jmvcdoc\search\search_test.js" />
+    <Content Include="jMvc\documentjs\jmvcdoc\test\qunit.js" />
+    <Content Include="jMvc\documentjs\jmvcdoc\tooltip.js" />
+    <Content Include="jMvc\documentjs\json.js" />
+    <Content Include="jMvc\documentjs\pages\how.js" />
+    <Content Include="jMvc\documentjs\scripts\run.js" />
+    <Content Include="jMvc\documentjs\searchdata.js" />
+    <Content Include="jMvc\documentjs\showdown.js" />
+    <Content Include="jMvc\documentjs\tags\alias.js" />
+    <Content Include="jMvc\documentjs\tags\author.js" />
+    <Content Include="jMvc\documentjs\tags\codeend.js" />
+    <Content Include="jMvc\documentjs\tags\codestart.js" />
+    <Content Include="jMvc\documentjs\tags\constructor.js" />
+    <Content Include="jMvc\documentjs\tags\demo.js" />
+    <Content Include="jMvc\documentjs\tags\description.js" />
+    <Content Include="jMvc\documentjs\tags\download.js" />
+    <Content Include="jMvc\documentjs\tags\hide.js" />
+    <Content Include="jMvc\documentjs\tags\iframe.js" />
+    <Content Include="jMvc\documentjs\tags\image.js" />
+    <Content Include="jMvc\documentjs\tags\inherits.js" />
+    <Content Include="jMvc\documentjs\tags\page.js" />
+    <Content Include="jMvc\documentjs\tags\param.js" />
+    <Content Include="jMvc\documentjs\tags\parent.js" />
+    <Content Include="jMvc\documentjs\tags\plugin.js" />
+    <Content Include="jMvc\documentjs\tags\return.js" />
+    <Content Include="jMvc\documentjs\tags\scope.js" />
+    <Content Include="jMvc\documentjs\tags\tag.js" />
+    <Content Include="jMvc\documentjs\tags\tags.js" />
+    <Content Include="jMvc\documentjs\tags\test.js" />
+    <Content Include="jMvc\documentjs\tags\type.js" />
+    <Content Include="jMvc\documentjs\test\docs.html" />
+    <Content Include="jMvc\documentjs\test\run.js" />
+    <Content Include="jMvc\documentjs\test\something.js" />
+    <Content Include="jMvc\documentjs\test\test.html" />
+    <Content Include="jMvc\documentjs\test\test_script.txt" />
+    <Content Include="jMvc\documentjs\types\add.js" />
+    <Content Include="jMvc\documentjs\types\attribute.js" />
+    <Content Include="jMvc\documentjs\types\class.js" />
+    <Content Include="jMvc\documentjs\types\function.js" />
+    <Content Include="jMvc\documentjs\types\page.js" />
+    <Content Include="jMvc\documentjs\types\prototype.js" />
+    <Content Include="jMvc\documentjs\types\script.js" />
+    <Content Include="jMvc\documentjs\types\static.js" />
+    <Content Include="jMvc\documentjs\types\type.js" />
+    <Content Include="jMvc\documentjs\types\types.js" />
+    <Content Include="jMvc\funcunit\browser\actions.js" />
+    <Content Include="jMvc\funcunit\browser\core.js" />
+    <Content Include="jMvc\funcunit\browser\events.js" />
+    <Content Include="jMvc\funcunit\browser\getters.js" />
+    <Content Include="jMvc\funcunit\browser\open.js" />
+    <Content Include="jMvc\funcunit\browser\queue.js" />
+    <Content Include="jMvc\funcunit\browser\resources\jquery.js" />
+    <Content Include="jMvc\funcunit\browser\resources\json.js" />
+    <Content Include="jMvc\funcunit\browser\traversers.js" />
+    <Content Include="jMvc\funcunit\browser\waits.js" />
+    <Content Include="jMvc\funcunit\build.js" />
+    <Content Include="jMvc\funcunit\commandline\envjs.js" />
+    <Content Include="jMvc\funcunit\commandline\events.js" />
+    <Content Include="jMvc\funcunit\commandline\output\json2.js" />
+    <Content Include="jMvc\funcunit\commandline\output\output.js" />
+    <Content Include="jMvc\funcunit\commandline\phantomjs.js" />
+    <Content Include="jMvc\funcunit\commandline\selenium.js" />
+    <Content Include="jMvc\funcunit\commandline\utils.js" />
+    <Content Include="jMvc\funcunit\coverage\coverage.css" />
+    <Content Include="jMvc\funcunit\coverage\coverage.html" />
+    <Content Include="jMvc\funcunit\coverage\coverage.js" />
+    <Content Include="jMvc\funcunit\dashboard.html" />
+    <Content Include="jMvc\funcunit\docs.html" />
+    <Content Include="jMvc\funcunit\funcunit.html" />
+    <Content Include="jMvc\funcunit\funcunit.js" />
+    <Content Include="jMvc\funcunit\generate_docs.html" />
+    <Content Include="jMvc\funcunit\index.html" />
+    <Content Include="jMvc\funcunit\pages\images\autosuggest.png" />
+    <Content Include="jMvc\funcunit\pages\images\broken.png" />
+    <Content Include="jMvc\funcunit\pages\images\commandline.png" />
+    <Content Include="jMvc\funcunit\pages\images\console.png" />
+    <Content Include="jMvc\funcunit\pages\images\qunit.png" />
+    <Content Include="jMvc\funcunit\proxy.js" />
+    <Content Include="jMvc\funcunit\qunit.html" />
+    <Content Include="jMvc\funcunit\qunit\qunit.css" />
+    <Content Include="jMvc\funcunit\qunit\qunit.js" />
+    <Content Include="jMvc\funcunit\qunit\test\qunit.html" />
+    <Content Include="jMvc\funcunit\qunit\test\test.js" />
+    <Content Include="jMvc\funcunit\selenium\client.js" />
+    <Content Include="jMvc\funcunit\selenium\selenium-java-client-driver.jar" />
+    <Content Include="jMvc\funcunit\selenium\selenium-server-standalone-2.12.0.jar" />
+    <Content Include="jMvc\funcunit\selenium\selenium.js" />
+    <Content Include="jMvc\funcunit\selenium\user-extensions.js" />
+    <Content Include="jMvc\funcunit\settings.js" />
+    <Content Include="jMvc\funcunit\syn\browsers.js" />
+    <Content Include="jMvc\funcunit\syn\build.js" />
+    <Content Include="jMvc\funcunit\syn\demo.html" />
+    <Content Include="jMvc\funcunit\syn\demo\record.js" />
+    <Content Include="jMvc\funcunit\syn\dist\syn.js" />
+    <Content Include="jMvc\funcunit\syn\dist\test.html" />
+    <Content Include="jMvc\funcunit\syn\drag\drag.html" />
+    <Content Include="jMvc\funcunit\syn\drag\drag.js" />
+    <Content Include="jMvc\funcunit\syn\drag\qunit.html" />
+    <Content Include="jMvc\funcunit\syn\drag\test\qunit\drag_test.js" />
+    <Content Include="jMvc\funcunit\syn\drag\test\qunit\qunit.js" />
+    <Content Include="jMvc\funcunit\syn\key.js" />
+    <Content Include="jMvc\funcunit\syn\mouse.js" />
+    <Content Include="jMvc\funcunit\syn\qunit.html" />
+    <Content Include="jMvc\funcunit\syn\recorder.html" />
+    <Content Include="jMvc\funcunit\syn\resources\jquery.event.drag.js" />
+    <Content Include="jMvc\funcunit\syn\resources\jquery.event.drop.js" />
+    <Content Include="jMvc\funcunit\syn\resources\jquery.js" />
+    <Content Include="jMvc\funcunit\syn\resources\qunit\qunit.css" />
+    <Content Include="jMvc\funcunit\syn\resources\qunit\qunit.js" />
+    <Content Include="jMvc\funcunit\syn\syn.js" />
+    <Content Include="jMvc\funcunit\syn\synthetic.html" />
+    <Content Include="jMvc\funcunit\syn\synthetic.js" />
+    <Content Include="jMvc\funcunit\syn\test\clickbasic.html" />
+    <Content Include="jMvc\funcunit\syn\test\qunit\h3.html" />
+    <Content Include="jMvc\funcunit\syn\test\qunit\key_test.js" />
+    <Content Include="jMvc\funcunit\syn\test\qunit\mouse_test.js" />
+    <Content Include="jMvc\funcunit\syn\test\qunit\page1.html" />
+    <Content Include="jMvc\funcunit\syn\test\qunit\page2.html" />
+    <Content Include="jMvc\funcunit\syn\test\qunit\qunit.js" />
+    <Content Include="jMvc\funcunit\syn\test\qunit\syn_test.js" />
+    <Content Include="jMvc\funcunit\syn\test\submit.html" />
+    <Content Include="jMvc\funcunit\syn\test\submitted.html" />
+    <Content Include="jMvc\funcunit\template.html" />
+    <Content Include="jMvc\funcunit\test\autosuggest\autosuggest.html" />
+    <Content Include="jMvc\funcunit\test\autosuggest\autosuggest.js" />
+    <Content Include="jMvc\funcunit\test\autosuggest\autosuggest_test.js" />
+    <Content Include="jMvc\funcunit\test\autosuggest\css\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="jMvc\funcunit\test\autosuggest\css\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="jMvc\funcunit\test\autosuggest\css\ui-lightness\jquery-ui-1.8.16.custom.css" />
+    <Content Include="jMvc\funcunit\test\autosuggest\funcunit.html" />
+    <Content Include="jMvc\funcunit\test\autosuggest\js\jquery-ui-1.8.16.custom.min.js" />
+    <Content Include="jMvc\funcunit\test\confirm.html" />
+    <Content Include="jMvc\funcunit\test\drag\drag.html" />
+    <Content Include="jMvc\funcunit\test\drag\drag.js" />
+    <Content Include="jMvc\funcunit\test\findclosest.html" />
+    <Content Include="jMvc\funcunit\test\funcunit\confirm_test.js" />
+    <Content Include="jMvc\funcunit\test\funcunit\find_closest_test.js" />
+    <Content Include="jMvc\funcunit\test\funcunit\funcunit.js" />
+    <Content Include="jMvc\funcunit\test\funcunit\funcunit_test.js" />
+    <Content Include="jMvc\funcunit\test\funcunit\iframe_test.js" />
+    <Content Include="jMvc\funcunit\test\funcunit\open_test.js" />
+    <Content Include="jMvc\funcunit\test\funcunit\protodrag_test.js" />
+    <Content Include="jMvc\funcunit\test\funcunit\syn_test.js" />
+    <Content Include="jMvc\funcunit\test\google\funcunit.html" />
+    <Content Include="jMvc\funcunit\test\google\google_test.js" />
+    <Content Include="jMvc\funcunit\test\iframe\haveframe.html" />
+    <Content Include="jMvc\funcunit\test\iframe\iframe.html" />
+    <Content Include="jMvc\funcunit\test\iframe\iframe2.html" />
+    <Content Include="jMvc\funcunit\test\iframe\replaceframe.html" />
+    <Content Include="jMvc\funcunit\test\jquery.event.drag.js" />
+    <Content Include="jMvc\funcunit\test\jquery.event.drop.js" />
+    <Content Include="jMvc\funcunit\test\myapp.html" />
+    <Content Include="jMvc\funcunit\test\myotherapp.html" />
+    <Content Include="jMvc\funcunit\test\open\first.html" />
+    <Content Include="jMvc\funcunit\test\open\second.html" />
+    <Content Include="jMvc\funcunit\test\protodrag\dragdrop.js" />
+    <Content Include="jMvc\funcunit\test\protodrag\effects.js" />
+    <Content Include="jMvc\funcunit\test\protodrag\funcunit_test.js" />
+    <Content Include="jMvc\funcunit\test\protodrag\myapp.html" />
+    <Content Include="jMvc\funcunit\test\protodrag\prototype.js" />
+    <Content Include="jMvc\funcunit\test\protodrag\scriptaculous.js" />
+    <Content Include="jMvc\funcunit\test\qunit\qunit.js" />
+    <Content Include="jMvc\funcunit\test\run.js" />
+    <Content Include="jMvc\jquery\build.js" />
+    <Content Include="jMvc\jquery\buildAll.js" />
+    <Content Include="jMvc\jquery\class\class.html" />
+    <Content Include="jMvc\jquery\class\class.js" />
+    <Content Include="jMvc\jquery\class\class_test.js" />
+    <Content Include="jMvc\jquery\class\qunit.html" />
+    <Content Include="jMvc\jquery\controller\controller.html" />
+    <Content Include="jMvc\jquery\controller\controller.js" />
+    <Content Include="jMvc\jquery\controller\controller_test.js" />
+    <Content Include="jMvc\jquery\controller\demo-update.html" />
+    <Content Include="jMvc\jquery\controller\qunit.html" />
+    <Content Include="jMvc\jquery\controller\route\qunit.html" />
+    <Content Include="jMvc\jquery\controller\route\route.html" />
+    <Content Include="jMvc\jquery\controller\route\route.js" />
+    <Content Include="jMvc\jquery\controller\route\route_test.js" />
+    <Content Include="jMvc\jquery\controller\subscribe\funcunit.html" />
+    <Content Include="jMvc\jquery\controller\subscribe\subscribe.html" />
+    <Content Include="jMvc\jquery\controller\subscribe\subscribe.js" />
+    <Content Include="jMvc\jquery\controller\view\qunit.html" />
+    <Content Include="jMvc\jquery\controller\view\test\qunit\controller_view_test.js" />
+    <Content Include="jMvc\jquery\controller\view\test\qunit\qunit.js" />
+    <Content Include="jMvc\jquery\controller\view\view.js" />
+    <Content Include="jMvc\jquery\dom\closest\closest.js" />
+    <Content Include="jMvc\jquery\dom\compare\compare.html" />
+    <Content Include="jMvc\jquery\dom\compare\compare.js" />
+    <Content Include="jMvc\jquery\dom\compare\compare_test.js" />
+    <Content Include="jMvc\jquery\dom\compare\qunit.html" />
+    <Content Include="jMvc\jquery\dom\cookie\cookie.js" />
+    <Content Include="jMvc\jquery\dom\cur_styles\cur_styles.html" />
+    <Content Include="jMvc\jquery\dom\cur_styles\cur_styles.js" />
+    <Content Include="jMvc\jquery\dom\cur_styles\cur_styles_test.js" />
+    <Content Include="jMvc\jquery\dom\cur_styles\qunit.html" />
+    <Content Include="jMvc\jquery\dom\dimensions\dimensions.html" />
+    <Content Include="jMvc\jquery\dom\dimensions\dimensions.js" />
+    <Content Include="jMvc\jquery\dom\dimensions\dimensions_test.js" />
+    <Content Include="jMvc\jquery\dom\dimensions\qunit.html" />
+    <Content Include="jMvc\jquery\dom\dom.js" />
+    <Content Include="jMvc\jquery\dom\fixture\fixture.html" />
+    <Content Include="jMvc\jquery\dom\fixture\fixture.js" />
+    <Content Include="jMvc\jquery\dom\fixture\fixtures\messages.html" />
+    <Content Include="jMvc\jquery\dom\fixture\fixture_test.js" />
+    <Content Include="jMvc\jquery\dom\fixture\qunit.html" />
+    <Content Include="jMvc\jquery\dom\form_params\form_params.html" />
+    <Content Include="jMvc\jquery\dom\form_params\form_params.js" />
+    <Content Include="jMvc\jquery\dom\form_params\form_params_test.js" />
+    <Content Include="jMvc\jquery\dom\form_params\qunit.html" />
+    <Content Include="jMvc\jquery\dom\range\qunit.html" />
+    <Content Include="jMvc\jquery\dom\range\range.html" />
+    <Content Include="jMvc\jquery\dom\range\range.js" />
+    <Content Include="jMvc\jquery\dom\range\range_test.js" />
+    <Content Include="jMvc\jquery\dom\route\qunit.html" />
+    <Content Include="jMvc\jquery\dom\route\route.html" />
+    <Content Include="jMvc\jquery\dom\route\route.js" />
+    <Content Include="jMvc\jquery\dom\route\route_test.js" />
+    <Content Include="jMvc\jquery\dom\selection\qunit.html" />
+    <Content Include="jMvc\jquery\dom\selection\selection.html" />
+    <Content Include="jMvc\jquery\dom\selection\selection.js" />
+    <Content Include="jMvc\jquery\dom\selection\selection_test.js" />
+    <Content Include="jMvc\jquery\dom\within\within.js" />
+    <Content Include="jMvc\jquery\download\btn.png" />
+    <Content Include="jMvc\jquery\download\download.css" />
+    <Content Include="jMvc\jquery\download\download.html" />
+    <Content Include="jMvc\jquery\download\download.js" />
+    <Content Include="jMvc\jquery\download\test\controllerpage.html" />
+    <Content Include="jMvc\jquery\download\test\jquery-1.4.3.js" />
+    <Content Include="jMvc\jquery\download\test\run.js" />
+    <Content Include="jMvc\jquery\event\default\default.html" />
+    <Content Include="jMvc\jquery\event\default\default.js" />
+    <Content Include="jMvc\jquery\event\default\defaultjquery.html" />
+    <Content Include="jMvc\jquery\event\default\default_pause_test.html" />
+    <Content Include="jMvc\jquery\event\default\default_pause_test.js" />
+    <Content Include="jMvc\jquery\event\default\default_test.js" />
+    <Content Include="jMvc\jquery\event\default\qunit.html" />
+    <Content Include="jMvc\jquery\event\destroyed\destroyed.html" />
+    <Content Include="jMvc\jquery\event\destroyed\destroyed.js" />
+    <Content Include="jMvc\jquery\event\destroyed\destroyed_menu.html" />
+    <Content Include="jMvc\jquery\event\destroyed\destroyed_test.js" />
+    <Content Include="jMvc\jquery\event\destroyed\qunit.html" />
+    <Content Include="jMvc\jquery\event\drag\drag.html" />
+    <Content Include="jMvc\jquery\event\drag\drag.js" />
+    <Content Include="jMvc\jquery\event\drag\drag_test.js" />
+    <Content Include="jMvc\jquery\event\drag\limit\limit.html" />
+    <Content Include="jMvc\jquery\event\drag\limit\limit.js" />
+    <Content Include="jMvc\jquery\event\drag\qunit.html" />
+    <Content Include="jMvc\jquery\event\drag\scroll\scroll.js" />
+    <Content Include="jMvc\jquery\event\drag\step\step.html" />
+    <Content Include="jMvc\jquery\event\drag\step\step.js" />
+    <Content Include="jMvc\jquery\event\drop\drop.html" />
+    <Content Include="jMvc\jquery\event\drop\drop.js" />
+    <Content Include="jMvc\jquery\event\drop\drop_test.js" />
+    <Content Include="jMvc\jquery\event\event.js" />
+    <Content Include="jMvc\jquery\event\handle\handle.js" />
+    <Content Include="jMvc\jquery\event\hashchange\hashchange.js" />
+    <Content Include="jMvc\jquery\event\hover\hover.html" />
+    <Content Include="jMvc\jquery\event\hover\hover.js" />
+    <Content Include="jMvc\jquery\event\hover\hover_test.js" />
+    <Content Include="jMvc\jquery\event\hover\qunit.html" />
+    <Content Include="jMvc\jquery\event\key\key.html" />
+    <Content Include="jMvc\jquery\event\key\key.js" />
+    <Content Include="jMvc\jquery\event\key\key_test.js" />
+    <Content Include="jMvc\jquery\event\key\qunit.html" />
+    <Content Include="jMvc\jquery\event\livehack\livehack.js" />
+    <Content Include="jMvc\jquery\event\pause\pause.html" />
+    <Content Include="jMvc\jquery\event\pause\pause.js" />
+    <Content Include="jMvc\jquery\event\pause\pause_test.js" />
+    <Content Include="jMvc\jquery\event\pause\qunit.html" />
+    <Content Include="jMvc\jquery\event\resize\demo.html" />
+    <Content Include="jMvc\jquery\event\resize\qunit.html" />
+    <Content Include="jMvc\jquery\event\resize\resize.html" />
+    <Content Include="jMvc\jquery\event\resize\resize.js" />
+    <Content Include="jMvc\jquery\event\resize\resize_test.js" />
+    <Content Include="jMvc\jquery\event\selection\qunit.html" />
+    <Content Include="jMvc\jquery\event\selection\selection.html" />
+    <Content Include="jMvc\jquery\event\selection\selection.js" />
+    <Content Include="jMvc\jquery\event\selection\selection_test.js" />
+    <Content Include="jMvc\jquery\event\swipe\qunit.html" />
+    <Content Include="jMvc\jquery\event\swipe\swipe.html" />
+    <Content Include="jMvc\jquery\event\swipe\swipe.js" />
+    <Content Include="jMvc\jquery\event\swipe\swipe_test.js" />
+    <Content Include="jMvc\jquery\event\tap\tap.html" />
+    <Content Include="jMvc\jquery\event\tap\tap.js" />
+    <Content Include="jMvc\jquery\generate\templates\model.js" />
+    <Content Include="jMvc\jquery\generate\test\app_plugin_model_controller.js" />
+    <Content Include="jMvc\jquery\generate\test\run.js" />
+    <Content Include="jMvc\jquery\generate\test\scaffold.js" />
+    <Content Include="jMvc\jquery\jquery.js" />
+    <Content Include="jMvc\jquery\lang\json\json.js" />
+    <Content Include="jMvc\jquery\lang\lang_test.js" />
+    <Content Include="jMvc\jquery\lang\object\object.html" />
+    <Content Include="jMvc\jquery\lang\object\object.js" />
+    <Content Include="jMvc\jquery\lang\object\object_test.js" />
+    <Content Include="jMvc\jquery\lang\object\qunit.html" />
+    <Content Include="jMvc\jquery\lang\observe\delegate\delegate.js" />
+    <Content Include="jMvc\jquery\lang\observe\delegate\delegate_test.js" />
+    <Content Include="jMvc\jquery\lang\observe\demo.html" />
+    <Content Include="jMvc\jquery\lang\observe\observe.html" />
+    <Content Include="jMvc\jquery\lang\observe\observe.js" />
+    <Content Include="jMvc\jquery\lang\observe\observe_test.js" />
+    <Content Include="jMvc\jquery\lang\observe\qunit.html" />
+    <Content Include="jMvc\jquery\lang\openajax\openajax.html" />
+    <Content Include="jMvc\jquery\lang\openajax\openajax.js" />
+    <Content Include="jMvc\jquery\lang\qunit.html" />
+    <Content Include="jMvc\jquery\lang\string\deparam\deparam.js" />
+    <Content Include="jMvc\jquery\lang\string\deparam\deparam_test.js" />
+    <Content Include="jMvc\jquery\lang\string\deparam\qunit.html" />
+    <Content Include="jMvc\jquery\lang\string\qunit.html" />
+    <Content Include="jMvc\jquery\lang\string\rsplit\rsplit.js" />
+    <Content Include="jMvc\jquery\lang\string\string.html" />
+    <Content Include="jMvc\jquery\lang\string\string.js" />
+    <Content Include="jMvc\jquery\lang\string\string_test.js" />
+    <Content Include="jMvc\jquery\lang\vector\vector.js" />
+    <Content Include="jMvc\jquery\model\backup\backup.html" />
+    <Content Include="jMvc\jquery\model\backup\backup.js" />
+    <Content Include="jMvc\jquery\model\backup\qunit.html" />
+    <Content Include="jMvc\jquery\model\backup\qunit\qunit.js" />
+    <Content Include="jMvc\jquery\model\demo-convert.html" />
+    <Content Include="jMvc\jquery\model\demo-dom.html" />
+    <Content Include="jMvc\jquery\model\demo-encapsulate.html" />
+    <Content Include="jMvc\jquery\model\demo-events.html" />
+    <Content Include="jMvc\jquery\model\demo-setter.html" />
+    <Content Include="jMvc\jquery\model\list\cookie\cookie.html" />
+    <Content Include="jMvc\jquery\model\list\cookie\cookie.js" />
+    <Content Include="jMvc\jquery\model\list\cookie\qunit.html" />
+    <Content Include="jMvc\jquery\model\list\cookie\qunit\qunit.js" />
+    <Content Include="jMvc\jquery\model\list\list-insert.html" />
+    <Content Include="jMvc\jquery\model\list\list.html" />
+    <Content Include="jMvc\jquery\model\list\list.js" />
+    <Content Include="jMvc\jquery\model\list\list_test.js" />
+    <Content Include="jMvc\jquery\model\list\local\local.js" />
+    <Content Include="jMvc\jquery\model\list\memory.html" />
+    <Content Include="jMvc\jquery\model\list\qunit.html" />
+    <Content Include="jMvc\jquery\model\model.js" />
+    <Content Include="jMvc\jquery\model\modelBinder.html" />
+    <Content Include="jMvc\jquery\model\pages\associations.html" />
+    <Content Include="jMvc\jquery\model\qunit.html" />
+    <Content Include="jMvc\jquery\model\service\json_rest\json_rest.js" />
+    <Content Include="jMvc\jquery\model\service\service.js" />
+    <Content Include="jMvc\jquery\model\service\twitter\twitter.html" />
+    <Content Include="jMvc\jquery\model\service\twitter\twitter.js" />
+    <Content Include="jMvc\jquery\model\service\yql\yql.html" />
+    <Content Include="jMvc\jquery\model\service\yql\yql.js" />
+    <Content Include="jMvc\jquery\model\store\qunit.html" />
+    <Content Include="jMvc\jquery\model\store\store.html" />
+    <Content Include="jMvc\jquery\model\store\store.js" />
+    <Content Include="jMvc\jquery\model\store\store_test.js" />
+    <Content Include="jMvc\jquery\model\test\qunit\associations_test.js" />
+    <Content Include="jMvc\jquery\model\test\qunit\model_test.js" />
+    <Content Include="jMvc\jquery\model\test\qunit\qunit.js" />
+    <Content Include="jMvc\jquery\model\validations\demo.html" />
+    <Content Include="jMvc\jquery\model\validations\qunit.html" />
+    <Content Include="jMvc\jquery\model\validations\qunit\validations_test.js" />
+    <Content Include="jMvc\jquery\model\validations\validations.html" />
+    <Content Include="jMvc\jquery\model\validations\validations.js" />
+    <Content Include="jMvc\jquery\qunit.html" />
+    <Content Include="jMvc\jquery\test\qunit\integration.js" />
+    <Content Include="jMvc\jquery\test\qunit\qunit.js" />
+    <Content Include="jMvc\jquery\test\run.js" />
+    <Content Include="jMvc\jquery\tie\qunit.html" />
+    <Content Include="jMvc\jquery\tie\tie.html" />
+    <Content Include="jMvc\jquery\tie\tie.js" />
+    <Content Include="jMvc\jquery\tie\tie_test.js" />
+    <Content Include="jMvc\jquery\view\compress.js" />
+    <Content Include="jMvc\jquery\view\ejs\ejs.js" />
+    <Content Include="jMvc\jquery\view\ejs\ejs_test.js" />
+    <Content Include="jMvc\jquery\view\ejs\qunit.html" />
+    <Content Include="jMvc\jquery\view\fulljslint.js" />
+    <Content Include="jMvc\jquery\view\helpers\helpers.js" />
+    <Content Include="jMvc\jquery\view\jaml\jaml.js" />
+    <Content Include="jMvc\jquery\view\micro\micro.js" />
+    <Content Include="jMvc\jquery\view\qunit.html" />
+    <Content Include="jMvc\jquery\view\test\compression\compression.html" />
+    <Content Include="jMvc\jquery\view\test\compression\compression.js" />
+    <Content Include="jMvc\jquery\view\test\compression\run.js" />
+    <Content Include="jMvc\jquery\view\test\qunit\qunit.js" />
+    <Content Include="jMvc\jquery\view\test\qunit\view_test.js" />
+    <Content Include="jMvc\jquery\view\tmpl\tmpl.js" />
+    <Content Include="jMvc\jquery\view\tmpl\tmpl_test.js" />
+    <Content Include="jMvc\jquery\view\view.html" />
+    <Content Include="jMvc\jquery\view\view.js" />
+    <Content Include="jMvc\MIT-LICENSE.txt" />
+    <Content Include="jMvc\prematch\fixtures\fixtures.js" />
+    <Content Include="jMvc\prematch\funcunit.html" />
+    <Content Include="jMvc\prematch\models\models.js" />
+    <Content Include="jMvc\prematch\models\navigator.js" />
+    <Content Include="jMvc\prematch\navigator\funcunit.html" />
+    <Content Include="jMvc\prematch\navigator\navigator.html" />
+    <Content Include="jMvc\prematch\navigator\navigator.js" />
+    <Content Include="jMvc\prematch\navigator\navigator_test.js" />
+    <Content Include="jMvc\prematch\prematch.css" />
+    <Content Include="jMvc\prematch\prematch.html" />
+    <Content Include="jMvc\prematch\prematch.js" />
+    <Content Include="jMvc\prematch\qunit.html" />
+    <Content Include="jMvc\prematch\scripts\build.html" />
+    <Content Include="jMvc\prematch\scripts\build.js" />
+    <Content Include="jMvc\prematch\scripts\clean.js" />
+    <Content Include="jMvc\prematch\scripts\crawl.js" />
+    <Content Include="jMvc\prematch\scripts\docs.js" />
+    <Content Include="jMvc\prematch\test\funcunit\funcunit.js" />
+    <Content Include="jMvc\prematch\test\funcunit\prematch_test.js" />
+    <Content Include="jMvc\prematch\test\qunit\prematch_test.js" />
+    <Content Include="jMvc\prematch\test\qunit\qunit.js" />
+    <Content Include="jMvc\steal\browser\browser.js" />
+    <Content Include="jMvc\steal\browser\client.js" />
+    <Content Include="jMvc\steal\browser\envjs\client.js" />
+    <Content Include="jMvc\steal\browser\envjs\envjs.js" />
+    <Content Include="jMvc\steal\browser\phantomjs\client.js" />
+    <Content Include="jMvc\steal\browser\phantomjs\launcher.js" />
+    <Content Include="jMvc\steal\browser\phantomjs\phantomjs.js" />
+    <Content Include="jMvc\steal\browser\test\browser.js" />
+    <Content Include="jMvc\steal\browser\test\mypage.html" />
+    <Content Include="jMvc\steal\browser\test\run.js" />
+    <Content Include="jMvc\steal\browser\test\trigger.js" />
+    <Content Include="jMvc\steal\browser\utils\rhinoServer.js" />
+    <Content Include="jMvc\steal\build\apps\apps.js" />
+    <Content Include="jMvc\steal\build\apps\test.js" />
+    <Content Include="jMvc\steal\build\build.js" />
+    <Content Include="jMvc\steal\build\open.js" />
+    <Content Include="jMvc\steal\build\pluginify\pluginify.js" />
+    <Content Include="jMvc\steal\build\pluginify\test\app\app.js" />
+    <Content Include="jMvc\steal\build\pluginify\test\app\steal.build.pluginify.test.app.js" />
+    <Content Include="jMvc\steal\build\pluginify\test\controller.html" />
+    <Content Include="jMvc\steal\build\pluginify\test\controller.js" />
+    <Content Include="jMvc\steal\build\pluginify\test\firstFunc.js" />
+    <Content Include="jMvc\steal\build\pluginify\test\pluginify_test.js" />
+    <Content Include="jMvc\steal\build\pluginify\test\secondFunc.js" />
+    <Content Include="jMvc\steal\build\pluginify\test\test_steals.js" />
+    <Content Include="jMvc\steal\build\pluginify\test\weirdRegexps.js" />
+    <Content Include="jMvc\steal\build\scripts\compiler.jar" />
+    <Content Include="jMvc\steal\build\scripts\scripts.js" />
+    <Content Include="jMvc\steal\build\scripts\uglify\.gitignore" />
+    <Content Include="jMvc\steal\build\scripts\uglify\docstyle.css" />
+    <Content Include="jMvc\steal\build\scripts\uglify\lib\parse-js.js" />
+    <Content Include="jMvc\steal\build\scripts\uglify\lib\process.js" />
+    <Content Include="jMvc\steal\build\scripts\uglify\lib\squeeze-more.js" />
+    <Content Include="jMvc\steal\build\scripts\uglify\uglify-js.js" />
+    <Content Include="jMvc\steal\build\styles\cssmin.js" />
+    <Content Include="jMvc\steal\build\styles\styles.js" />
+    <Content Include="jMvc\steal\build\styles\test\app\app.css" />
+    <Content Include="jMvc\steal\build\styles\test\app\app.html" />
+    <Content Include="jMvc\steal\build\styles\test\app\app.js" />
+    <Content Include="jMvc\steal\build\styles\test\css2.css" />
+    <Content Include="jMvc\steal\build\styles\test\css3.css" />
+    <Content Include="jMvc\steal\build\styles\test\css\css1.css" />
+    <Content Include="jMvc\steal\build\styles\test\css\justin.png" />
+    <Content Include="jMvc\steal\build\styles\test\dataurls\dataurls.css" />
+    <Content Include="jMvc\steal\build\styles\test\dataurls\dataurls.html" />
+    <Content Include="jMvc\steal\build\styles\test\dataurls\dataurls.js" />
+    <Content Include="jMvc\steal\build\styles\test\dataurls\module\module.css" />
+    <Content Include="jMvc\steal\build\styles\test\dataurls\module\module.js" />
+    <Content Include="jMvc\steal\build\styles\test\multiline.css" />
+    <Content Include="jMvc\steal\build\styles\test\page.html" />
+    <Content Include="jMvc\steal\build\styles\test\production.html" />
+    <Content Include="jMvc\steal\build\styles\test\production.js" />
+    <Content Include="jMvc\steal\build\styles\test\productionCompare.css" />
+    <Content Include="jMvc\steal\build\styles\test\styles_test.js" />
+    <Content Include="jMvc\steal\build\styles\test\test.js" />
+    <Content Include="jMvc\steal\build\styles\test\upload.PNG" />
+    <Content Include="jMvc\steal\build\test\0.js" />
+    <Content Include="jMvc\steal\build\test\1.js" />
+    <Content Include="jMvc\steal\build\test\2.js" />
+    <Content Include="jMvc\steal\build\test\basicpage.html" />
+    <Content Include="jMvc\steal\build\test\basicsource.js" />
+    <Content Include="jMvc\steal\build\test\circular\circular.html" />
+    <Content Include="jMvc\steal\build\test\circular\circular.js" />
+    <Content Include="jMvc\steal\build\test\circular\fileA.js" />
+    <Content Include="jMvc\steal\build\test\circular\fileB.js" />
+    <Content Include="jMvc\steal\build\test\circular\prod.html" />
+    <Content Include="jMvc\steal\build\test\dev.js" />
+    <Content Include="jMvc\steal\build\test\devCleaned.js" />
+    <Content Include="jMvc\steal\build\test\foo.html" />
+    <Content Include="jMvc\steal\build\test\foo.js" />
+    <Content Include="jMvc\steal\build\test\foreign.html" />
+    <Content Include="jMvc\steal\build\test\foreign.js" />
+    <Content Include="jMvc\steal\build\test\https.html" />
+    <Content Include="jMvc\steal\build\test\https.js" />
+    <Content Include="jMvc\steal\build\test\jqueryready.html" />
+    <Content Include="jMvc\steal\build\test\jqueryready.js" />
+    <Content Include="jMvc\steal\build\test\removecode.js" />
+    <Content Include="jMvc\steal\build\test\run.js" />
+    <Content Include="jMvc\steal\build\test\stealpage.html" />
+    <Content Include="jMvc\steal\build\test\stealprodpage.html" />
+    <Content Include="jMvc\steal\build\test\styles\another.js" />
+    <Content Include="jMvc\steal\build\test\styles\prod.html" />
+    <Content Include="jMvc\steal\build\test\styles\prod2.html" />
+    <Content Include="jMvc\steal\build\test\styles\styles.html" />
+    <Content Include="jMvc\steal\build\test\styles\styles.js" />
+    <Content Include="jMvc\steal\clean\beautify.js" />
+    <Content Include="jMvc\steal\clean\clean.js" />
+    <Content Include="jMvc\steal\clean\jslint.js" />
+    <Content Include="jMvc\steal\clean\test\clean_test.js" />
+    <Content Include="jMvc\steal\clean\test\test.js" />
+    <Content Include="jMvc\steal\clean\test\testEnd.js" />
+    <Content Include="jMvc\steal\coffee\coffee-script.js" />
+    <Content Include="jMvc\steal\coffee\coffee.html" />
+    <Content Include="jMvc\steal\coffee\coffee.js" />
+    <Content Include="jMvc\steal\coffee\coffeeprod.html" />
+    <Content Include="jMvc\steal\coffee\coffee_build_test.js" />
+    <Content Include="jMvc\steal\coffee\coffee_demo.js" />
+    <Content Include="jMvc\steal\dev\dev.js" />
+    <Content Include="jMvc\steal\generate\ejs.js" />
+    <Content Include="jMvc\steal\generate\generate.js" />
+    <Content Include="jMvc\steal\generate\inflector.js" />
+    <Content Include="jMvc\steal\generate\system.js" />
+    <Content Include="jMvc\steal\generate\test\run.js" />
+    <Content Include="jMvc\steal\get\basic.js" />
+    <Content Include="jMvc\steal\get\dummy.js" />
+    <Content Include="jMvc\steal\get\get.js" />
+    <Content Include="jMvc\steal\get\git.js" />
+    <Content Include="jMvc\steal\get\json.js" />
+    <Content Include="jMvc\steal\get\test\.gitignore" />
+    <Content Include="jMvc\steal\get\test\.gitmodules" />
+    <Content Include="jMvc\steal\get\test\get_test.js" />
+    <Content Include="jMvc\steal\get\test\stealCode1.js" />
+    <Content Include="jMvc\steal\html\crawl\crawl.js" />
+    <Content Include="jMvc\steal\html\html.js" />
+    <Content Include="jMvc\steal\html\test\async.js" />
+    <Content Include="jMvc\steal\html\test\html_test.js" />
+    <Content Include="jMvc\steal\html\test\page.html" />
+    <Content Include="jMvc\steal\instrument\instrument.js" />
+    <Content Include="jMvc\steal\instrument\parser.js" />
+    <Content Include="jMvc\steal\instrument\process.js" />
+    <Content Include="jMvc\steal\instrument\qunit.html" />
+    <Content Include="jMvc\steal\instrument\test\code.js" />
+    <Content Include="jMvc\steal\instrument\test\qunit\parse_test.js" />
+    <Content Include="jMvc\steal\instrument\test\tabs_test.js" />
+    <Content Include="jMvc\steal\instrument\utils.js" />
+    <Content Include="jMvc\steal\less\less.html" />
+    <Content Include="jMvc\steal\less\less.js" />
+    <Content Include="jMvc\steal\less\less_demo.js" />
+    <Content Include="jMvc\steal\less\less_engine.js" />
+    <Content Include="jMvc\steal\less\less_test.js" />
+    <Content Include="jMvc\steal\less\qunit.html" />
+    <Content Include="jMvc\steal\less\test\another.css" />
+    <Content Include="jMvc\steal\less\test\anotherfile.js" />
+    <Content Include="jMvc\steal\less\test\less_test.js" />
+    <Content Include="jMvc\steal\less\test\page.html" />
+    <Content Include="jMvc\steal\less\test\production.html" />
+    <Content Include="jMvc\steal\less\test\productionCompare.css" />
+    <Content Include="jMvc\steal\less\test\styles.css" />
+    <Content Include="jMvc\steal\less\test\test.js" />
+    <Content Include="jMvc\steal\make.js" />
+    <Content Include="jMvc\steal\parse\parse.js" />
+    <Content Include="jMvc\steal\parse\parse_test.js" />
+    <Content Include="jMvc\steal\parse\test\dev.js" />
+    <Content Include="jMvc\steal\parse\test\stealCode1.js" />
+    <Content Include="jMvc\steal\parse\test\testCode.js" />
+    <Content Include="jMvc\steal\parse\test\trailslash.js" />
+    <Content Include="jMvc\steal\parse\tokens.js" />
+    <Content Include="jMvc\steal\rhino\blank.html" />
+    <Content Include="jMvc\steal\rhino\build.js" />
+    <Content Include="jMvc\steal\rhino\empty.html" />
+    <Content Include="jMvc\steal\rhino\env.js" />
+    <Content Include="jMvc\steal\rhino\file.js" />
+    <Content Include="jMvc\steal\rhino\js.jar" />
+    <Content Include="jMvc\steal\rhino\loader.js" />
+    <Content Include="jMvc\steal\rhino\prompt.js" />
+    <Content Include="jMvc\steal\rhino\rhino.js" />
+    <Content Include="jMvc\steal\rhino\test.js" />
+    <Content Include="jMvc\steal\rhino\test\test.js" />
+    <Content Include="jMvc\steal\rhino\utils.js" />
+    <Content Include="jMvc\steal\steal.js" />
+    <Content Include="jMvc\steal\steal.production.js" />
+    <Content Include="jMvc\steal\test\absoluteurl.html" />
+    <Content Include="jMvc\steal\test\absoluteurl\absoluteurl.js" />
+    <Content Include="jMvc\steal\test\absoluteurl\alert.js" />
+    <Content Include="jMvc\steal\test\another\two.js" />
+    <Content Include="jMvc\steal\test\files\dup.js" />
+    <Content Include="jMvc\steal\test\files\duplicate.js" />
+    <Content Include="jMvc\steal\test\files\file1.js" />
+    <Content Include="jMvc\steal\test\files\file2.js" />
+    <Content Include="jMvc\steal\test\files\file3.js" />
+    <Content Include="jMvc\steal\test\files\file4.css" />
+    <Content Include="jMvc\steal\test\files\file5.js" />
+    <Content Include="jMvc\steal\test\files\loadDuplicate.js" />
+    <Content Include="jMvc\steal\test\files\plugin\dependency.js" />
+    <Content Include="jMvc\steal\test\files\plugin\plugin.js" />
+    <Content Include="jMvc\steal\test\files\require.css" />
+    <Content Include="jMvc\steal\test\files\require.js" />
+    <Content Include="jMvc\steal\test\files\something.txt" />
+    <Content Include="jMvc\steal\test\files\steal.js" />
+    <Content Include="jMvc\steal\test\funcunit.html" />
+    <Content Include="jMvc\steal\test\funcunit\funcunit.js" />
+    <Content Include="jMvc\steal\test\funcunit\steal_test.js" />
+    <Content Include="jMvc\steal\test\map\foo\another\another.js" />
+    <Content Include="jMvc\steal\test\map\foo\foo.js" />
+    <Content Include="jMvc\steal\test\map\foo\foo2.js" />
+    <Content Include="jMvc\steal\test\map\foo\foo3.js" />
+    <Content Include="jMvc\steal\test\map\foo\second\second.js" />
+    <Content Include="jMvc\steal\test\map\map.html" />
+    <Content Include="jMvc\steal\test\map\map.js" />
+    <Content Include="jMvc\steal\test\map\qunit.html" />
+    <Content Include="jMvc\steal\test\map\qunit\map_test.js" />
+    <Content Include="jMvc\steal\test\map\qunit\qunit.js" />
+    <Content Include="jMvc\steal\test\multiple\app2\app2.js" />
+    <Content Include="jMvc\steal\test\multiple\app2\zoo.js" />
+    <Content Include="jMvc\steal\test\multiple\multiple.html" />
+    <Content Include="jMvc\steal\test\multiple\multiple.js" />
+    <Content Include="jMvc\steal\test\multiple\qunit.html" />
+    <Content Include="jMvc\steal\test\multiple\qunit\multiple_test.js" />
+    <Content Include="jMvc\steal\test\multiple\qunit\qunit.js" />
+    <Content Include="jMvc\steal\test\one\four.js" />
+    <Content Include="jMvc\steal\test\one\one.js" />
+    <Content Include="jMvc\steal\test\package\1.js" />
+    <Content Include="jMvc\steal\test\package\package.js" />
+    <Content Include="jMvc\steal\test\package\start.js" />
+    <Content Include="jMvc\steal\test\package\steal.html" />
+    <Content Include="jMvc\steal\test\package\uses.js" />
+    <Content Include="jMvc\steal\test\qunit.html" />
+    <Content Include="jMvc\steal\test\qunit\loadtwice.js" />
+    <Content Include="jMvc\steal\test\qunit\one.css" />
+    <Content Include="jMvc\steal\test\qunit\qunit.js" />
+    <Content Include="jMvc\steal\test\qunit\steal_test.js" />
+    <Content Include="jMvc\steal\test\run.js" />
+    <Content Include="jMvc\steal\test\steal.html" />
+    <Content Include="jMvc\steal\test\test.js" />
+    <Content Include="jMvc\steal\test\three.js" />
+    <Content Include="jMvc\steal\test\two.css" />
+    <Content Include="Scripts\jquery-1.7.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-2.1.0.debug.js" />
+    <Content Include="Scripts\knockout-2.1.0.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Images\accent.png" />
+    <Content Include="Images\bullet.png" />
+    <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\orderedList0.png" />
+    <Content Include="Images\orderedList1.png" />
+    <Content Include="Images\orderedList2.png" />
+    <Content Include="Images\orderedList3.png" />
+    <Content Include="Images\orderedList4.png" />
+    <Content Include="Images\orderedList5.png" />
+    <Content Include="Images\orderedList6.png" />
+    <Content Include="Images\orderedList7.png" />
+    <Content Include="Images\orderedList8.png" />
+    <Content Include="Images\orderedList9.png" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\_RemoveExternalLoginsPartial.cshtml" />
+    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Manage.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="jMvc\prematch\docs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Sportsbook.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="jMvc\changelog.md" />
+    <None Include="jMvc\documentjs\.DS_Store" />
+    <None Include="jMvc\documentjs\demo\something.md" />
+    <None Include="jMvc\documentjs\doc" />
+    <None Include="jMvc\documentjs\doc.bat" />
+    <None Include="jMvc\documentjs\jmvcdoc\content\views\attribute.ejs" />
+    <None Include="jMvc\documentjs\jmvcdoc\content\views\class.ejs" />
+    <None Include="jMvc\documentjs\jmvcdoc\content\views\constructor.ejs" />
+    <None Include="jMvc\documentjs\jmvcdoc\content\views\favorite.ejs" />
+    <None Include="jMvc\documentjs\jmvcdoc\content\views\function.ejs" />
+    <None Include="jMvc\documentjs\jmvcdoc\content\views\page.ejs" />
+    <None Include="jMvc\documentjs\jmvcdoc\content\views\results.ejs" />
+    <None Include="jMvc\documentjs\jmvcdoc\content\views\top.ejs" />
+    <None Include="jMvc\documentjs\jmvcdoc\demo\demo.ejs" />
+    <None Include="jMvc\documentjs\jmvcdoc\images\.DS_Store" />
+    <None Include="jMvc\documentjs\jmvcdoc\nav\views\results.ejs" />
+    <None Include="jMvc\documentjs\jmvcdoc\style.less" />
+    <None Include="jMvc\documentjs\jmvcdoc\summary.ejs" />
+    <None Include="jMvc\documentjs\README" />
+    <None Include="jMvc\documentjs\test\docs\searchData.json" />
+    <None Include="jMvc\documentjs\test\docs\Something.json" />
+    <None Include="jMvc\documentjs\test\page.md" />
+    <None Include="jMvc\documentjs\update" />
+    <None Include="jMvc\funcunit\coverage\cobertura.ejs" />
+    <None Include="jMvc\funcunit\dependencies.json" />
+    <None Include="jMvc\funcunit\pages\actions.md" />
+    <None Include="jMvc\funcunit\pages\assertions.md" />
+    <None Include="jMvc\funcunit\pages\coverage.md" />
+    <None Include="jMvc\funcunit\pages\demos.md" />
+    <None Include="jMvc\funcunit\pages\envjs.md" />
+    <None Include="jMvc\funcunit\pages\features.md" />
+    <None Include="jMvc\funcunit\pages\finding.md" />
+    <None Include="jMvc\funcunit\pages\integrations.md" />
+    <None Include="jMvc\funcunit\pages\jenkins.md" />
+    <None Include="jMvc\funcunit\pages\maven.md" />
+    <None Include="jMvc\funcunit\pages\phantomjs.md" />
+    <None Include="jMvc\funcunit\pages\remote.md" />
+    <None Include="jMvc\funcunit\pages\selenium.md" />
+    <None Include="jMvc\funcunit\pages\waits.md" />
+    <None Include="jMvc\funcunit\README.md" />
+    <None Include="jMvc\funcunit\run" />
+    <None Include="jMvc\funcunit\summary.ejs" />
+    <None Include="jMvc\funcunit\syn\README" />
+    <None Include="jMvc\funcunit\update" />
+    <None Include="jMvc\jquery\controller\pages\listening.md" />
+    <None Include="jMvc\jquery\controller\pages\plugin.md" />
+    <None Include="jMvc\jquery\controller\view\test\qunit\views\init.micro" />
+    <None Include="jMvc\jquery\dom\cur_styles\test\curStyles.micro" />
+    <None Include="jMvc\jquery\dom\dimensions\test\curStyles.micro" />
+    <None Include="jMvc\jquery\dom\dimensions\test\outer.micro" />
+    <None Include="jMvc\jquery\dom\fixture\fixtures\foo.json" />
+    <None Include="jMvc\jquery\dom\fixture\fixtures\foobar.json" />
+    <None Include="jMvc\jquery\dom\fixture\fixtures\remove.json" />
+    <None Include="jMvc\jquery\dom\fixture\fixtures\test.json" />
+    <None Include="jMvc\jquery\dom\form_params\test\basics.micro" />
+    <None Include="jMvc\jquery\dom\form_params\test\checkbox.micro" />
+    <None Include="jMvc\jquery\dom\form_params\test\truthy.micro" />
+    <None Include="jMvc\jquery\generate\app" />
+    <None Include="jMvc\jquery\generate\coffee\controller" />
+    <None Include="jMvc\jquery\generate\coffee\templates\controller\%28underscore%29.coffee.ejs" />
+    <None Include="jMvc\jquery\generate\coffee\templates\controller\%28underscore%29.html.ejs" />
+    <None Include="jMvc\jquery\generate\coffee\templates\controller\%28underscore%29_test.coffee.ejs" />
+    <None Include="jMvc\jquery\generate\coffee\templates\controller\funcunit.html.ejs" />
+    <None Include="jMvc\jquery\generate\controller" />
+    <None Include="jMvc\jquery\generate\model" />
+    <None Include="jMvc\jquery\generate\page" />
+    <None Include="jMvc\jquery\generate\plugin" />
+    <None Include="jMvc\jquery\generate\scaffold" />
+    <None Include="jMvc\jquery\generate\templates\app\%28application_name%29.css.ejs" />
+    <None Include="jMvc\jquery\generate\templates\app\%28application_name%29.html.ejs" />
+    <None Include="jMvc\jquery\generate\templates\app\%28application_name%29.js.ejs" />
+    <None Include="jMvc\jquery\generate\templates\app\%28application_name%29.md.ejs" />
+    <None Include="jMvc\jquery\generate\templates\app\docs\.ignore" />
+    <None Include="jMvc\jquery\generate\templates\app\fixtures\.ignore" />
+    <None Include="jMvc\jquery\generate\templates\app\fixtures\fixtures.js.ejs" />
+    <None Include="jMvc\jquery\generate\templates\app\funcunit.html.ejs" />
+    <None Include="jMvc\jquery\generate\templates\app\models\.ignore" />
+    <None Include="jMvc\jquery\generate\templates\app\models\models.js.ejs" />
+    <None Include="jMvc\jquery\generate\templates\app\qunit.html.ejs" />
+    <None Include="jMvc\jquery\generate\templates\app\scripts\build.html.ejs" />
+    <None Include="jMvc\jquery\generate\templates\app\scripts\build.js.ejs" />
+    <None Include="jMvc\jquery\generate\templates\app\scripts\clean.js.ejs" />
+    <None Include="jMvc\jquery\generate\templates\app\scripts\crawl.js.ejs" />
+    <None Include="jMvc\jquery\generate\templates\app\scripts\docs.js.ejs" />
+    <None Include="jMvc\jquery\generate\templates\app\test\funcunit\%28application_name%29_test.js.ejs" />
+    <None Include="jMvc\jquery\generate\templates\app\test\funcunit\funcunit.js.ejs" />
+    <None Include="jMvc\jquery\generate\templates\app\test\qunit\%28application_name%29_test.js.ejs" />
+    <None Include="jMvc\jquery\generate\templates\app\test\qunit\qunit.js.ejs" />
+    <None Include="jMvc\jquery\generate\templates\controller\%28underscore%29.html.ejs" />
+    <None Include="jMvc\jquery\generate\templates\controller\%28underscore%29.js.ejs" />
+    <None Include="jMvc\jquery\generate\templates\controller\%28underscore%29_test.js.ejs" />
+    <None Include="jMvc\jquery\generate\templates\controller\funcunit.html.ejs" />
+    <None Include="jMvc\jquery\generate\templates\controller\views\.ignore" />
+    <None Include="jMvc\jquery\generate\templates\controller\views\init.ejs.ejs" />
+    <None Include="jMvc\jquery\generate\templates\fixturemake.ejs" />
+    <None Include="jMvc\jquery\generate\templates\model\models\%28underscore%29.js.ejs" />
+    <None Include="jMvc\jquery\generate\templates\model\test\qunit\%28underscore%29_test.js.ejs" />
+    <None Include="jMvc\jquery\generate\templates\page.ejs" />
+    <None Include="jMvc\jquery\generate\templates\plugin\%28application_name%29.html.ejs" />
+    <None Include="jMvc\jquery\generate\templates\plugin\%28application_name%29.js.ejs" />
+    <None Include="jMvc\jquery\generate\templates\plugin\%28application_name%29_test.js.ejs" />
+    <None Include="jMvc\jquery\generate\templates\plugin\qunit.html.ejs" />
+    <None Include="jMvc\jquery\generate\templates\scaffoldHookup.ejs" />
+    <None Include="jMvc\jquery\generate\templates\scaffold\create\create.html.ejs" />
+    <None Include="jMvc\jquery\generate\templates\scaffold\create\create.js.ejs" />
+    <None Include="jMvc\jquery\generate\templates\scaffold\create\create_test.js.ejs" />
+    <None Include="jMvc\jquery\generate\templates\scaffold\create\funcunit.html.ejs" />
+    <None Include="jMvc\jquery\generate\templates\scaffold\create\views\init.ejs.ejs" />
+    <None Include="jMvc\jquery\generate\templates\scaffold\list\funcunit.html.ejs" />
+    <None Include="jMvc\jquery\generate\templates\scaffold\list\list.html.ejs" />
+    <None Include="jMvc\jquery\generate\templates\scaffold\list\list.js.ejs" />
+    <None Include="jMvc\jquery\generate\templates\scaffold\list\list_test.js.ejs" />
+    <None Include="jMvc\jquery\generate\templates\scaffold\list\views\%28underscore%29.ejs.ejs" />
+    <None Include="jMvc\jquery\generate\templates\scaffold\list\views\init.ejs.ejs" />
+    <None Include="jMvc\jquery\jquerymx.md" />
+    <None Include="jMvc\jquery\lang\observe\observe.md" />
+    <None Include="jMvc\jquery\model\fixtures\school.json" />
+    <None Include="jMvc\jquery\model\fixtures\schools.json" />
+    <None Include="jMvc\jquery\model\pages\deferreds.md" />
+    <None Include="jMvc\jquery\model\pages\encapsulate.md" />
+    <None Include="jMvc\jquery\model\pages\typeconversion.md" />
+    <None Include="jMvc\jquery\model\test\4.json" />
+    <None Include="jMvc\jquery\model\test\create.json" />
+    <None Include="jMvc\jquery\model\test\people.json" />
+    <None Include="jMvc\jquery\model\test\person.json" />
+    <None Include="jMvc\jquery\model\test\qunit\findAll.json" />
+    <None Include="jMvc\jquery\model\test\schools.json" />
+    <None Include="jMvc\jquery\model\test\update4.json" />
+    <None Include="jMvc\jquery\README" />
+    <None Include="jMvc\jquery\test\template.ejs" />
+    <None Include="jMvc\jquery\test\thing.json" />
+    <None Include="jMvc\jquery\update" />
+    <None Include="jMvc\jquery\view\ejs\easyhookup.ejs" />
+    <None Include="jMvc\jquery\view\ejs\test_template.ejs" />
+    <None Include="jMvc\jquery\view\pages\deferreds.md" />
+    <None Include="jMvc\jquery\view\test\compression\views\keep.me" />
+    <None Include="jMvc\jquery\view\test\compression\views\test.ejs" />
+    <None Include="jMvc\jquery\view\test\qunit\deferred.ejs" />
+    <None Include="jMvc\jquery\view\test\qunit\deferreds.ejs" />
+    <None Include="jMvc\jquery\view\test\qunit\hookup.ejs" />
+    <None Include="jMvc\jquery\view\test\qunit\hookupvalcall.ejs" />
+    <None Include="jMvc\jquery\view\test\qunit\large.ejs" />
+    <None Include="jMvc\jquery\view\test\qunit\nested_plugin.ejs" />
+    <None Include="jMvc\jquery\view\test\qunit\plugin.ejs" />
+    <None Include="jMvc\jquery\view\test\qunit\temp.ejs" />
+    <None Include="jMvc\jquery\view\test\qunit\template.ejs" />
+    <None Include="jMvc\jquery\view\test\qunit\template.jaml" />
+    <None Include="jMvc\jquery\view\test\qunit\template.micro" />
+    <None Include="jMvc\jquery\view\test\qunit\template.tmpl" />
+    <None Include="jMvc\jquery\view\tmpl\test.tmpl" />
+    <None Include="jMvc\js" />
+    <None Include="jMvc\js.bat" />
+    <None Include="jMvc\prematch\navigator\views\init.ejs" />
+    <None Include="jMvc\prematch\prematch.md" />
+    <None Include="jMvc\README" />
+    <None Include="jMvc\steal\buildjs" />
+    <None Include="jMvc\steal\build\pluginify\test\app\template.ejs" />
+    <None Include="jMvc\steal\build\scripts\uglify\bin\uglifyjs" />
+    <None Include="jMvc\steal\build\scripts\uglify\package.json" />
+    <None Include="jMvc\steal\build\scripts\uglify\README.org" />
+    <None Include="jMvc\steal\build\test\styles\another.less" />
+    <None Include="jMvc\steal\build\test\styles\mystyles.less" />
+    <None Include="jMvc\steal\cleanjs" />
+    <None Include="jMvc\steal\coffee\coffee.coffee" />
+    <None Include="jMvc\steal\generate\app" />
+    <None Include="jMvc\steal\generate\templates\app\%28application_name%29.coffee.ejs" />
+    <None Include="jMvc\steal\generate\templates\app\%28application_name%29.css.ejs" />
+    <None Include="jMvc\steal\generate\templates\app\%28application_name%29.html.ejs" />
+    <None Include="jMvc\steal\generate\templates\app\%28application_name%29.js.ejs" />
+    <None Include="jMvc\steal\generate\templates\app\docs\.ignore" />
+    <None Include="jMvc\steal\generate\templates\app\plugin\plugin.js.ejs" />
+    <None Include="jMvc\steal\generate\templates\app\plugin\plugin.less.ejs" />
+    <None Include="jMvc\steal\generate\templates\app\scripts\build.html.ejs" />
+    <None Include="jMvc\steal\generate\templates\app\scripts\build.js.ejs" />
+    <None Include="jMvc\steal\generate\templates\app\scripts\clean.js.ejs" />
+    <None Include="jMvc\steal\generate\templates\app\scripts\crawl.js.ejs" />
+    <None Include="jMvc\steal\generate\templates\app\test\.ignore" />
+    <None Include="jMvc\steal\generate\templates\page.ejs" />
+    <None Include="jMvc\steal\getjs" />
+    <None Include="jMvc\steal\get\gets.json" />
+    <None Include="jMvc\steal\get\test\README" />
+    <None Include="jMvc\steal\js" />
+    <None Include="jMvc\steal\js.bat" />
+    <None Include="jMvc\steal\less\less.less" />
+    <None Include="jMvc\steal\less\test\styles.less" />
+    <None Include="jMvc\steal\pluginifyjs" />
+    <None Include="jMvc\steal\README.md" />
+    <None Include="jMvc\steal\rhino\loader" />
+    <None Include="jMvc\steal\rhino\loader.bat" />
+    <None Include="jMvc\steal\test\files\require.foo" />
+    <None Include="jMvc\steal\test\map\foo\template.ejs" />
+    <None Include="jMvc\steal\update" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>9240</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

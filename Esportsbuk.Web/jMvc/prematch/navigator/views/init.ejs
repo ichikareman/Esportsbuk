@@ -1,0 +1,15 @@
+<% var categoryList = this; %>
+<ul>
+<% for(var catIndex = 0; catIndex < categoryList.length; catIndex++ ){ %>
+    <% var category = categoryList[catIndex]; %>
+    <% var subCatList = category.SubCategories; %>
+        <li><%= category.Name%>
+            <ul>
+                <% for(var subCatIndex = 0; subCatIndex < subCatList.length; subCatIndex++){ %> 
+                    <% var subCat = subCatList[subCatIndex]; %>           
+                    <li><%= subCat.Name %></li>
+                <% } %>
+            </ul>
+        </li>
+<% } %>
+</ul>
